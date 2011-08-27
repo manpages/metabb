@@ -35,6 +35,7 @@ echo "!/metabb/" >> .gitignore
 
 touch ./metabb/.gitignore
 echo "!*" > ./metabb/.gitignore
+echo "files/" >> ./metabb/.gitignore
 
 touch Emakefile
 echo "{\"fission/src/*\", [{outdir, \"fission/ebin\"}]}." > Emakefile
@@ -46,7 +47,7 @@ echo "erl -name wip@somehost -pa fission/ebin/ fisbb/ebin/ yaws/ebin/ mustache/e
 chmod 775 ./erl.sh
 
 echo ""
-echo "I'm tired. do 'chgrp <group> -R .' and 'chown <user> -R .' yourself"
+echo "I'm tired. do 'chgrp -R <group> .' and 'chown -R <user> .' yourself"
 echo "And you might like to edit ./yaws.conf and ./erl.sh"
 echo "Put something like metabb@<your_hostname> after -name key in ./erl.sh"
 echo ""
@@ -55,3 +56,4 @@ echo "> application:start(yaws)."
 echo "> application:start(fission)."
 echo "If it is the first run, also do"
 echo "> fission:initialize(node())."
+ 

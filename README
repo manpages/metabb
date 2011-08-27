@@ -1,1 +1,15 @@
-MetaBB is forum engine
+MetaBB forum engine
+-------------------
+
+In order to get development environment just run env.sh as root
+Then do 
+	$ chgrp -R <group> .
+	$ chown -R <user> .
+And edit yaws.conf and erl.sh
+
+To get it finally working run erl.sh and do
+	> application:start(yaws).
+	> application:start(fission).
+
+If it is the first run, also do
+	> fission:initialize(node()).
