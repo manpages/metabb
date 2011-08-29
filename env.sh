@@ -17,8 +17,8 @@ cd ..
 wget http://memoricide.very.lv/yaws.conf
 mkdir logs
 
-echo "Moustache or beard?"
-git clone https://github.com/mojombo/mustache.erl.git ./mustache
+#echo "Moustache or beard?"
+#git clone https://github.com/mojombo/mustache.erl.git ./mustache
 
 echo "Radiation!"
 hg clone https://bitbucket.org/verypositive/fission
