@@ -32,6 +32,7 @@ touch .gitignore
 echo "*" > .gitignore
 echo "!/env.sh" >> .gitignore
 echo "!/metabb/" >> .gitignore
+echo "!/eunit/" >> .gitignore
 
 touch ./metabb/.gitignore
 echo "!*" > ./metabb/.gitignore
@@ -40,6 +41,7 @@ echo "public/files/" >> ./metabb/.gitignore
 touch Emakefile
 echo "{\"fission/src/*\", [{outdir, \"fission/ebin\"}]}." > Emakefile
 echo "{\"metabb/src/*\", [{outdir, \"metabb/ebin\"}]}." >> Emakefile
+echo "{\"eunit/src/*\", [{outdir, \"eunit/ebin\"}]}." >> Emakefile
 #echo "{\"mustache/src/*\", [{outdir, \"mustache/ebin\"}]}." >> Emakefile
 
 touch erl.sh
