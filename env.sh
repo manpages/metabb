@@ -35,12 +35,12 @@ echo "!/metabb/" >> .gitignore
 
 touch ./metabb/.gitignore
 echo "!*" > ./metabb/.gitignore
-echo "files/" >> ./metabb/.gitignore
+echo "public/files/" >> ./metabb/.gitignore
 
 touch Emakefile
 echo "{\"fission/src/*\", [{outdir, \"fission/ebin\"}]}." > Emakefile
-echo "{\"fisbb/src/*\", [{outdir, \"fisbb/ebin\"}]}." >> Emakefile
-echo "{\"mustache/src/*\", [{outdir, \"mustache/ebin\"}]}." >> Emakefile
+echo "{\"metabb/src/*\", [{outdir, \"metabb/ebin\"}]}." >> Emakefile
+#echo "{\"mustache/src/*\", [{outdir, \"mustache/ebin\"}]}." >> Emakefile
 
 touch erl.sh
 echo "erl -name wip@somehost -pa fission/ebin/ fisbb/ebin/ yaws/ebin/ mustache/ebin" > erl.sh
